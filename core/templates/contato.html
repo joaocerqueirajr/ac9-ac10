@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load widget_tweaks %}
+
+{% block titulo %}
+    Contato
+{% endblock titulo %}
+
+{% block main %}
+
+    <div class="container-fluid">
+
+        <form method="POST" novalidate>
+            {% csrf_token %}
+            <h1 class="py-2 mt-3">Entre em Contato</h1>
+            {% include "forms/form-group.html" with form=form %}
+        
+            <button type="submit" class="btn btn-primary btn-lg btn-block mb-3">Enviar</button>
+        </form>
+    </div>
+
+{% endblock %}

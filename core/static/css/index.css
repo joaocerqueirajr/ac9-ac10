@@ -1,0 +1,76 @@
+tr.column-center {
+    text-align: center;
+}
+
+.container-fluid {
+    background-color: black;
+    
+}
+
+h1.display-5 {
+    font-size: 30px;
+    color:whitesmoke;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+img.rounded.float-left {
+    width: 200px;
+    /* left:45%;
+    right: 50%; */
+    /* position: absolute; */
+}
+
+img.table {
+    width: 200px;
+    /* left:45%; */
+    /* right: 50%; */
+    /* position: absolute; */
+}
+
+tr.column-center {
+    text-align: center;
+}
+
+p.lead {
+    font-size: 20px;
+    color:black;
+    /* text-transform: uppercase; */
+    text-align: justify;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+h3.lead {
+    font-size: 25px;
+    color:black;
+    text-transform: uppercase;
+    text-align: justify;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+h5.display-5#breve-sobre{
+    font-size: 17px;
+    color:black;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+button.btn.btn-primary#saiba-sobre{
+    margin-top: 5px;
+    margin-right: 100px;
+    margin-left: 100px;
+    width: 150px;
+    left: 35%;
+    position: absolute;
+}
+

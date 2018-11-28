@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static %}
+{% block titulo %}
+{{ curso.nome }}
+{% endblock %}
+
+{% block links %}
+<link rel="stylesheet" href="{% static 'css/curso.css' %}">
+{% endblock %}
+
+{% block main %}
+    {% comment %} <section class="container d-flex flex-wrap justify-content-between">
+        <h1 class="text-center w-100 py-5">{{ curso.nome }}</h1>
+
+        <section class="sobre border bg-light border-primary mx-2 p-3">
+            <h2><u>Sobre o Curso</u></h2>
+            <p class="py-1">{{ curso.sobre | linebreaks }}</p>
+        </section>
+        <section class="informacoes mx-2 py-3">
+            
+            <h2><u>{{ curso.get_tipo_display }}</u></h2>
+            
+            
+            <ul class="list-group py-4">
+                <li class="list-group-item active"><span class="font-weight-bold .text-white text-uppercase">Períodos</span></li>
+                {% if curso.matutino %}<li class="list-group-item"><span class="font-weight-bold text-primary">Matutino:</span> 07h00 às 12h40</li>{% endif %}
+                {% if curso.vespertino %}<li class="list-group-item"><span class="font-weight-bold text-primary">Vespertino:</span> 13h15 às 17h25</li>{% endif %}
+                {% if curso.noturno %}<li class="list-group-item"><span class="font-weight-bold text-primary">Noturno:</span> 19h00 às 23h40</li>{% endif %}
+                <li class="list-group-item"><span class="font-weight-bold text-primary">Duração:</span> {{ curso.duracao }} semestres</li>
+            </ul>
+
+        </section>
+        <section class="curriculo w-100 text-center my-5">
+            <h2><u>Matriz Curricular</u></h2>
+            <div class="row">          
+                <div class="col-3 nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    {% for semestre in curso.semestres%}
+                        <a class="nav-link" id="v-pills-{{semestre}}-tab" data-toggle="pill" href="#{{semestre}}" role="tab">{{semestre}}o Semestre</a>
+                    {%endfor%}
+                </div>
+        
+                <div class="tab-content col-9" id="v-pills-tabContent">
+                    {% for semestre in curso.semestres%}
+                    <div class="tab-pane fade " id="{{semestre}}" role="tabpanel" aria-labelledby="v-pills-{{semestre}}-tab">
+                        <div class="list-group">
+                            {% for disciplina in disciplinas%}
+                                {% if disciplina.semestre == semestre %}
+                                    <a href="{% url 'curriculo:disciplina' curso.sigla disciplina.identificador|slugify %}" class="list-group-item list-group-item-action">{{disciplina }}</a>                                
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>   
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+</section> {% endcomment %}
+{% endblock %}

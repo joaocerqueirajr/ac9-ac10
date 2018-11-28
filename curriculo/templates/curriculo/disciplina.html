@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+{{ disciplina.identificador }}
+{% endblock %}
+
+{% block main %}
+<!-- <h1 class="text-center"></h1> -->
+<div class="jumbotron">
+    <h1 class="display-4">{{ disciplina.nome }}</h1>
+    <p class="lead">{{ disciplina.bibliografia_basica }}</p>
+    <hr class="my-4">
+    <p>{{ disciplina.plano_de_ensino }}</p>
+    <p>{{ disciplina.carga_horaria }} horas.</p>
+</div>
+{% endblock %}

@@ -1,0 +1,64 @@
+* {
+    margin:0;
+}
+
+body {
+    background-color: whitesmoke;
+  }
+
+.navbar .navbar-expand-lg .navbar-light .bg-dark .fixed-top .my-header {
+    display: inline-block;
+    float: none !important;
+}
+    
+.navbar .navbar-collapse {
+    text-align: center;
+}
+  
+ul {
+list-style-type:none;
+}
+
+img.logo1 {
+    width: 25px;
+}
+
+a.navbar-brand{
+    font: sans-serif;
+    font-style: oblique;
+    font-variant:small-caps;
+    font-weight:bold;
+}
+
+img.profile {
+    width: 35px;
+}
+
+p.footer {
+    font-weight:bold;
+    text-align: center;
+}
+
+img.footer-img {
+    width: 150px;
+    filter: invert(1000);
+    left:45%;
+    position: absolute;
+
+}
+
+a.footer-a {
+    text-align: center;
+}
+
+li.footer-li {
+    text-align: center;
+}
+
+li.footer-li2 {
+    text-align: left;
+}
+
+tr.column-center {
+    text-align: center;
+}
