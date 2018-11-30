@@ -1,10 +1,11 @@
 {% extends "base.html" %}
+{% load i18n admin_urls%}
 
 {% block main %}
 <br>
     {% if user.tipo == 'C' %}
         <h1>Olá Coordenador {{user}} </h1>
-
+        
     {% elif user.tipo == 'P' %}
         <h1> Olá Professor {{user}} </h1>
 
